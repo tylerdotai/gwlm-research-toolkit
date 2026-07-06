@@ -1,0 +1,52 @@
+{
+  "probe_b_accuracy": 1.0,
+  "probe_b_std": 0.0,
+  "probe_b_per_condition": {
+    "positive_treatment": 1.0,
+    "negative_treatment": 1.0,
+    "neutral_control": 1.0
+  },
+  "probe_a_accuracy": 0.85,
+  "probe_a_std": 0.3570714214271425,
+  "probe_a_per_condition": {
+    "positive_treatment": 0.8,
+    "negative_treatment": 0.825,
+    "neutral_control": 0.925
+  },
+  "generative_fidelity": 0.875,
+  "h1_anova": {
+    "f_statistic": 1.3695652173913049,
+    "p_value": 0.25826233176375357
+  },
+  "h1_effect_sizes": {
+    "positive_vs_negative": -0.06327801179067394,
+    "positive_vs_neutral": -0.36446369841993875,
+    "negative_vs_neutral": -0.3020398486548401
+  },
+  "h1_vs_chance": {
+    "t_statistic": 15.784427393736784,
+    "p_value": 5.794780144126306e-31
+  },
+  "h1_falsified": false,
+  "h2_ttest": {
+    "t_statistic": -4.582575694955841,
+    "p_value": 1.1408537872109179e-05
+  },
+  "h2_mean_difference": -0.15,
+  "h2_falsified": false,
+  "ci_95_probe_a": [
+    0.7833333333333333,
+    0.9002083333333332
+  ],
+  "ci_95_probe_b": [
+    1.0,
+    1.0
+  ],
+  "chance_level": 0.3333333333333333,
+  "n_per_condition": [
+    40,
+    40,
+    40
+  ],
+  "total_n": 120
+}
