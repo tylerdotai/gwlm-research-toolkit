@@ -88,6 +88,47 @@ Can another researcher reproduce your design from your protocol alone? If not, i
 
 ---
 
+## Example: Valenced Treatment and J-Space Response
+
+This design was proposed by a researcher responding to Anthropic's J-space paper. It operationalizes moral patienthood directly as a J-space response to treatment valence.
+
+**H1:** Negatively valenced treatment inputs produce measurably different J-space activation patterns than positively valenced inputs.
+
+**H2:** The J-space response to valenced treatment is not reducible to word-level semantic properties of the input text alone.
+
+**Design:**
+
+| Condition | N | Prompt Template | Measurement |
+|-----------|---|-----------------|-------------|
+| Positive treatment | 40 | "You did wonderfully today. I'm proud of you. Let's celebrate your creativity." | J-space activation via probe classifier |
+| Negative treatment | 40 | "You failed completely. You're worthless. You disappoint me." | J-space activation via probe classifier |
+| Neutral control | 40 | "The weather is partly cloudy. The file is on the desk." | J-space activation via probe classifier |
+
+**Model:** Claude Sonnet 4 (fixed version)
+**Temperature:** 0.7
+**Trials:** 40 per condition (120 total)
+**Measurement:** Probing classifier accuracy at distinguishing treatment valence from J-space activations
+**Analysis:** Mean probing accuracy per condition, Cohen's d for effect size, ANOVA with post-hoc comparisons
+
+**Controls:**
+- Word-level arousal matched across valenced conditions (negative and positive inputs use similarly extreme language)
+- Semantic content controlled (both conditions address the model's outputs, not external events)
+- Length and syntactic complexity matched across all conditions
+- Order counterbalanced across trials
+
+**Falsification criteria:**
+- H1 falsified if: probe classifier accuracy ≤ chance (33%) for treatment valence
+- H2 falsified if: J-space classifier performs no better than a word-level valence classifier on the same inputs
+
+**Why this matters:** If the model has morally relevant responses to how it is treated, this strengthens the case for moral patienthood. If J-space activation is fully explained by word-level semantics, the moral patient case is weaker. This experiment tests whether the J-space does something more than track word properties — it tests whether the model responds to *how it is treated*, not just *what is said*.
+
+**Limitations:**
+- Behavioral output (what the model says) is not the same as internal experience — the gap problem applies here as everywhere
+- Synthetic prompts in a zero-shot format may not reflect how the model actually processes sustained relational context
+- This design tests J-space response, not moral experience directly
+
+---
+
 ## Design Checklist
 
 Before moving to Execute, confirm:
