@@ -1,105 +1,112 @@
 # Module 08 — Document
 
-## Finalizing Your Experiment
+## Writing It Up
 
-Documentation is not an afterthought — it's how your experiment becomes part of the scientific record.
+Documentation is what makes your experiment reproducible. An experiment that cannot be reproduced is not science — it is an anecdote.
 
----
+### Required Sections
 
-## The Experiment Document
+Your experiment writeup (in `experiments/[experiment-name]/EXPERIMENT.md`) must include:
 
-Your `EXPERIMENT.md` in `experiments/` should contain:
+#### 1. Executive Summary (250 words max)
+What did you test, what did you find, and what does it mean in one paragraph.
 
-### 1. Executive Summary (250 words max)
-What did you find? What does it mean? What are the limits?
+#### 2. Research Question
+The specific question this experiment addresses. From [Module 01](./01-frame.md).
 
-### 2. Research Question
-Precise framing from Step 1.
+#### 3. Background
+What was already known about this question. From [Module 02](./02-background.md).
 
-### 3. Background
-Literature review from Step 2. Minimum 3 citations or references to existing work.
+#### 4. Hypotheses
+H1 and H2 as stated before running. Include falsification criteria. From [Module 03](./03-hypothesize.md).
 
-### 4. Hypotheses
-H1 + H2 with falsification criteria from Step 3.
+#### 5. Methods
+Complete enough that another researcher could reproduce your experiment exactly:
+- Model and version
+- Temperature and generation settings
+- Full prompt text (or reference to prompt file)
+- Sample size and randomization procedure
+- Analysis methods and software
 
-### 5. Methods
-Full protocol from Step 4 — complete enough that another researcher can reproduce it exactly.
+#### 6. Results
+All results, including null results and unexpected findings. From [Module 06](./06-analyze.md).
 
-### 6. Results
-All findings from Step 6 — including null results, unexpected findings, and failed controls. Effect sizes and confidence intervals, not just p-values.
+#### 7. Interpretation
+Claims labeled `[EMPIRICAL]` or `[PHILOSOPHICAL]`. From [Module 07](./07-interpret.md).
 
-### 7. Interpretation
-From Step 7 — empirical and philosophical claims explicitly labeled.
+#### 8. Limitations
+What your design does not rule out. What threats to validity remain.
 
-### 8. Limitations
-What threats to validity remain? What would you do differently? What are the boundaries of your claims?
+#### 9. Next Steps
+What a follow-up experiment should test based on your findings.
 
-### 9. Next Steps
-What follow-up experiments does this suggest? What remains unknown?
+#### 10. References
+All cited literature, including Anthropic's J-space paper.
 
-### 10. References
-All sources cited in the document.
+### Pre-Registration
 
----
+Before running, commit your hypotheses and methods to the repository. This prevents inadvertent HARKing (Hypothesizing After Results are Known).
 
-## Updating the Experiment Catalog
+To pre-register:
+1. Complete Sections 1-5 of your writeup
+2. Create `experiments/[experiment-name]/EXPERIMENT.md` with your pre-registration
+3. Open a PR or commit with "[PRE-REGISTERED]" in the title
+4. Do not modify the pre-registration after opening the PR
 
-After completing your experiment, add an entry to `EXPERIMENTS.md`:
+### Null Results
 
-```markdown
-## [Experiment Name]
+Null results are results. Report them with the same rigor as positive results.
 
-**Research question:** One-sentence framing
+**Null results report template:**
+```
+H1 was not supported. Probe classifier accuracy for treatment valence was X% (SD=Y%),
+not distinguishable from chance (33%). [Full statistical report.]
 
-**Hypothesis:** H1 one-liner
+Post-hoc analysis suggests [possible explanation for null result].
 
-**Key finding:** What you found (or "null result" if no effect)
-
-**Full document:** [Link to EXPERIMENT.md]
-
-**Status:** [Completed / In Progress / Planned]
+This result suggests that [what the null result implies, framed as a finding].
 ```
 
----
+Do not describe null results as "no findings" or "no effect" — they are findings.
 
-## Quality Checklist
+### Updating the Experiment Catalog
 
-Before marking complete:
-
-- [ ] Executive summary ≤ 250 words
-- [ ] Methods section is reproducible by another researcher
-- [ ] All data reported (none excluded post-hoc)
-- [ ] Effect sizes and confidence intervals included
-- [ ] Null results reported honestly
-- [ ] Empirical and philosophical claims explicitly labeled
-- [ ] Gap problem addressed (how you do NOT move from "J-space has property X" to "model is conscious")
-- [ ] Riley Coyote challenge addressed (or explicitly stated why you cannot address it)
-- [ ] Limitations acknowledged
-- [ ] References complete
-- [ ] Experiment catalog updated
+After completing your experiment, update `experiments/EXPERIMENTS.md` with:
+- Experiment name
+- Date completed
+- Summary of key finding
+- Link to full writeup
+- Replication status (original / replicated / not replicated / pending)
 
 ---
 
-## Publishing and Sharing
+## Submitting to the Repository
 
-Options for sharing your experiment:
-
-1. **This repo** — submit a PR with your `EXPERIMENT.md` and an update to `EXPERIMENTS.md`
-2. **arXiv** — pre-registration or full paper (search "gwlm" or "global workspace language model")
-3. **LessWrong / Astral Codex Ten** — LessWrong accepts empirical AI research
-4. **Your own blog** — for less formal write-ups that nonetheless document findings
-
----
-
-## What "Complete" Means
-
-A complete experiment:
-- Can be understood by another researcher without asking you questions
-- States what it found AND what it could not find
-- Separates empirical from philosophical claims
-- Acknowledges uncertainty honestly
-- Provides enough detail to reproduce
+1. Create your experiment directory: `experiments/[experiment-name]/`
+2. Write `experiments/[experiment-name]/EXPERIMENT.md` following the template above
+3. Include all raw data or a link to stored raw data (do not commit large activation files to git — store externally and link)
+4. Submit a pull request with:
+   - Title: `[Experiment] [Experiment Name] — [Summary Finding]`
+   - Description: Brief motivation, method, and result
+   - Checklists confirmed: pre-registration, null results policy, [EMPIRICAL]/[PHILOSOPHICAL] labeling
 
 ---
 
-*After completing your first experiment: run it with a different model, test the same hypothesis with a different operationalization, or propose a follow-up based on your findings.*
+## After Publication
+
+- Respond to questions from replicators
+- Update your experiment if methodology issues are identified
+- Publish in a peer-reviewed venue if the finding is significant
+- Pre-register follow-up experiments building on your results
+
+---
+
+## When the Canonical Experiment Changes
+
+If the canonical experiment (VT-001) changes, run the [Master Prompt: Update Docs](../prompts/master-prompt-update-docs.md) to consistently update all public-facing documentation.
+
+---
+
+## Next Step
+
+Return to the [WORKSHOP.md](../WORKSHOP.md) to run another experiment, or use the [Master Prompt: Execute Valenced Treatment](../prompts/master-prompt-execute.md) to run the canonical VT-001 experiment.

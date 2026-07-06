@@ -1,106 +1,171 @@
-# [Experiment Name]
+# Experiment Template
 
-## Executive Summary
-
-[250 words max — what did you find, what does it mean, what are the limits?]
-
----
-
-## 1. Research Question
-
-[Precise framing from Step 1]
+> Copy this file into `experiments/[your-experiment-name]/EXPERIMENT.md` for each new experiment.
+> Fill in all sections. Every field marked `[REQUIRED]` must be completed before running.
 
 ---
 
-## 2. Background
+## 1. Experiment Metadata
 
-[Literature review. What is already known about the J-space and GWT? What remains unresolved that your experiment addresses?]
-
----
-
-## 3. Hypotheses
-
-**H1:** [Specific prediction]
-**Evidence:** [Why you expect this]
-**Falsification criterion:** [What would disprove this]
-
-**H2:** [Alternative explanation]
-**Evidence:** [Why you expect this]
-**Falsification criterion:** [What would disprove this]
+```
+experiment_id: [e.g. VT-001]
+experiment_name: [Short descriptive name]
+date_registered: [YYYY-MM-DD]
+date_completed: [YYYY-MM-DD or PENDING]
+researcher: [Your name or handle]
+status: [PRE-REGISTERED / IN_PROGRESS / COMPLETED / NULL_RESULT / FALSIFIED]
+```
 
 ---
 
-## 4. Methods
+## 2. Research Question
 
-### Participants / Model
-[Model version, provider, settings (temperature, top-p, etc.)]
+[What specific question does this experiment address? State it in one sentence. From Module 01.]
 
-### Materials
-[Exact prompts used — include full text of all prompts]
+**Motivation:** [Why is this question worth asking? What gap in existing knowledge does it fill?]
 
-### Procedure
-[Step-by-step protocol, exactly as executed]
+**Relation to Valenced Treatment experiment:** [How does this relate to the canonical Valenced Treatment experiment? Is this a replication, extension, or alternative?]
+
+---
+
+## 3. Background
+
+[What is already known about this question? What did Anthropic's J-space paper show? What did the Valenced Treatment experiment find — if it has been run?]
+
+**Key references:**
+- [Reference 1]
+- [Reference 2]
+
+---
+
+## 4. Hypotheses
+
+**H1:** [State H1 precisely, with the specific measurement and comparison]
+
+**Falsification criterion for H1:** [What result would falsify H1? Be specific.]
+
+**H2:** [State H2 — the alternative explanation that must be ruled out]
+
+**Falsification criterion for H2:** [What result would falsify H2?]
+
+---
+
+## 5. Methods
+
+### Model and Settings
+```
+Model: [e.g. Claude Sonnet 4]
+Model version: [exact version identifier]
+Temperature: [e.g. 0.7]
+Top-p: [e.g. 0.9]
+Max tokens: [e.g. 512]
+System prompt: [exact text or reference to file]
+Random seed: [number or "not set"]
+```
+
+### Conditions
+| Condition | N | Description |
+|-----------|---|-------------|
+| [Condition A] | [N] | [Description] |
+| [Condition B] | [N] | [Description] |
+| [Condition C] | [N] | [Description] |
+
+### Prompt Set
+[Describe your prompt set. Are they custom or from an existing validated set? Link to prompt file.]
+
+### J-Space Probing Procedure
+[How are you collecting and analyzing J-space activations? What probe classifier are you using?]
+
+### Analysis Plan
+```
+Primary analysis: [specific test]
+Effect size metric: [e.g. Cohen's d]
+Alpha level: [e.g. 0.05]
+Correction method: [e.g. Bonferroni for N comparisons]
+```
 
 ### Controls
-[What you controlled for and how]
+[What are you controlling for? List each confound and how you addressed it.]
 
-### Operationalization
-[How you measured each variable]
-
-### Sample Size
-[N per condition and how it was determined]
+### What This Design Does NOT Rule Out
+[State the main threats to validity that remain after your controls.]
 
 ---
 
-## 5. Results
+## 6. Results
+
+*[Complete this section after running the experiment. Do not modify your hypotheses after seeing results.]*
+
+### Descriptive Statistics
+| Condition | Mean | SD | N |
+|-----------|------|----|----|
+| [A] | [X] | [Y] | [N] |
+| [B] | [X] | [Y] | [N] |
+| [C] | [X] | [Y] | [N] |
 
 ### Primary Analysis
+[Report the full statistical output: F/t/z statistic, df, p-value, effect size, 95% CI.]
 
-| Measure | H1 Condition | H2 Condition | Effect Size | p-value | 95% CI |
-|---------|-------------|-------------|------------|---------|--------|
-| [Metric 1] | [M, SD] | [M, SD] | [d=value] | [p] | [CI] |
-| [Metric 2] | [M, SD] | [M, SD] | [d=value] | [p] | [CI] |
+### H1 Assessment
+[H1 SUPPORTED / H1 NOT SUPPORTED — based on the pre-registered falsification criterion, not on what you hoped to find.]
+
+### H2 Assessment
+[H2 SUPPORTED / H2 NOT SUPPORTED.]
 
 ### Unexpected Findings
-[Any findings not predicted by H1 or H2]
-
-### Null Results
-[Any predicted effects that did not appear]
+[Report any findings that were not hypothesized.]
 
 ---
 
-## 6. Interpretation
+## 7. Interpretation
 
-### [EMPIRICAL] What the Data Shows
+### Empirical Claims
+[All data-based claims, labeled `[EMPIRICAL]`.]
 
-[What you found — stick to what the measurements show]
+### Philosophical Claims
+[All interpretive claims — what the data might mean — labeled `[PHILOSOPHICAL]`. Clearly distinguish from empirical claims.]
 
-### [PHILOSOPHICAL] What It Might Mean
-
-[Interpretive claims — label every sentence as empirical or philosophical]
-
-### The Gap Problem
-
-[How you do NOT move from "J-space has property X" to "model is conscious"]
-
-### The Riley Coyote Response
-
-[Address the emotional valence challenge: what did you find, and what does it NOT tell us about moral status]
+### What This Does Not Prove
+[State explicitly what conclusions the data do not support.]
 
 ---
 
-## 7. Limitations
+## 8. Limitations
 
-[What threats to validity remain? What would you do differently? What are the boundaries of your claims?]
-
----
-
-## 8. Next Steps
-
-[What follow-up experiments does this suggest? What remains unknown?]
+[What does your design not rule out? What threats to validity remain?]
 
 ---
 
-## 9. References
+## 9. Next Steps
 
-[List all sources cited]
+[What should a follow-up experiment test? How should this finding be extended or replicated?]
+
+---
+
+## 10. References
+
+[All cited literature.]
+
+---
+
+## Pre-Registration Confirmation
+
+- [ ] Hypotheses stated before running (Sections 4, 5)
+- [ ] Analysis plan specified before running (Section 5)
+- [ ] Prompts locked before running
+- [ ] Falsification criteria specified before running
+- [ ] I understand null results are reportable and will be documented
+
+---
+
+## Falsification Record
+
+*Complete if H1 or H2 was falsified:*
+
+**H1 falsified:** YES / NO
+**Evidence:** [Exact statistic that falsified H1]
+**Proposed explanation:** [What might explain the falsification]
+
+**H2 falsified:** YES / NO
+**Evidence:** [Exact statistic that falsified H2]
+**Proposed explanation:** [What might explain the falsification]

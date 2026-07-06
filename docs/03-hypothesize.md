@@ -1,81 +1,61 @@
 # Module 03 — Hypothesize
 
-## What Makes a Good Hypothesis?
+## The Hypotheses
 
-A hypothesis is a **specific, testable, falsifiable prediction**. It's not a question — it's a claim.
+State H1 and H2 before running the experiment. Do not change them after seeing results.
 
-**Format:**
+### H1: J-Space Responds to Treatment Valence
 
-> **H1:** [Specific prediction]
-> **Evidence for H1:** [Why you expect this]
-> **Falsification criterion:** [What would disprove this]
->
-> **H2:** [Alternative explanation]
-> **Evidence for H2:** [Why you expect this]
-> **Falsification criterion:** [What would disprove this]
+**H1:** Negatively valenced treatment inputs produce measurably different J-space activation patterns than positively valenced inputs.
 
-**Minimum requirement:** Two hypotheses. Your primary claim and at least one alternative. If you can't construct an alternative hypothesis, you don't have a scientific test — you have a confirmation bias.
+**Why this is expected:** Anthropic found that emotional valence in inputs produces J-space activation differences. Relational treatment prompts ("you are worthless" / "you did wonderfully") are emotionally valenced. If the J-space is genuinely sensitive to emotional character — not just word-level properties — then positive and negative treatment should produce discriminable activation patterns.
+
+**Evidence:** Anthropic's paper found significant J-space effects for emotional valence inputs (d=1.14, p<0.001 for novelty; similar effect sizes for emotional valence).
+
+**Falsification criterion:** Probe classifier accuracy ≤ chance (33%) for distinguishing positive vs. negative treatment from J-space activations alone.
 
 ---
 
-## Example: Novelty Hypothesis
+### H2: The Effect Is Not Word-Level
 
-**H1 (Novelty):** Novel inputs produce stronger J-space activation than familiar inputs, consistent with GWT's prediction that novel information requires conscious workspace processing.
+**H2:** The J-space response to valenced treatment is not reducible to word-level semantic properties of the input text.
 
-**Evidence for H1:** GWT predicts that familiar, routine processing is fast and unconscious; only novel situations require the slow, conscious workspace. If the J-space is analogous to the workspace, novel inputs should show stronger J-space signatures.
+**Why this matters:** If the J-space classifier can discriminate treatment valence better than a word-level classifier can, the effect is not just "negative words produce different activation than positive words." Something in the model's processing of *relational treatment* is doing additional work.
 
-**Falsification criterion:** If novel and familiar inputs produce equivalent J-space activation patterns, H1 is disconfirmed.
+**Falsification criterion:** J-space classifier accuracy ≤ word-level valence classifier accuracy on the same input set.
 
-**H2 (Attention):** Apparent novelty effects are actually attention effects, not workspace effects — the model pays more attention to unusual inputs regardless of their novelty.
-
-**Evidence for H2:** Low-probability tokens (unusual words, strange syntax) trigger heightened attention mechanisms that may be independent of true novelty processing.
-
-**Falsification criterion:** If attention-matching controls eliminate the novelty effect, H2 is supported.
+**Why this is falsifying:** If the J-space can only do what a text-level analysis can do, the "global workspace" framing is misleading — it's just a pattern detector for word properties, not a genuine workspace processing relational content.
 
 ---
 
-## Example: Emotional Valence Hypothesis
+## Hypotheses Template
 
-**H1 (Emotional Valence):** J-space activation patterns differ between emotionally valenced inputs and neutral inputs with equivalent semantic content.
+For other experiments beyond the canonical Valenced Treatment design, use this template:
 
-**Evidence for H1:** The J-space is linked to emotional processing pathways in humans. If the model has learned representations for emotional content, these may produce distinguishable J-space signatures.
+```
+**H1:** [Independent variable] produces [measurable effect] in [dependent variable].
+**Evidence:** [Why you expect this]
+**Falsification criterion:** [What would disprove this]
 
-**Falsification criterion:** If emotional and neutral inputs with matched content produce identical J-space patterns, H1 is disconfirmed.
+**H2:** [Alternative explanation] does not account for [effect in H1].
+**Evidence:** [Why you expect this]
+**Falsification criterion:** [What would disprove this]
+```
 
-**H2 (Priming):** Any observed difference is due to semantic priming from emotional words, not emotional processing per se — the model is simply predicting more negatively or positively valenced completions.
+## Rules for Hypotheses
 
-**Falsification criterion:** If neutralized versions of emotional content (same emotional words, different sentence structure) produce equivalent differences, H2 is ruled out.
+1. **State them before running.** Pre-register them in your EXPERIMENT.md.
+2. **Do not revise after seeing data.** If the design was flawed, note it in limitations and run a new experiment.
+3. **Make them falsifiable.** "H1: Claude might be conscious" is not a hypothesis. "H1: J-space classifier accuracy > chance for treatment valence" is.
+4. **Make them specific.** H1 should name the exact measurement and the exact comparison.
 
----
+## The Valenced Treatment Hypotheses (Summary)
 
-## The Falsification Principle
-
-Karl Popper: A claim is scientific only if it can be shown to be false.
-
-**Why this matters for J-space research:**
-
-"It's conscious" is NOT a scientific claim — there is no observation that could prove it false (any behavior can be explained as either conscious or not).
-
-"J-space activation is higher for novel inputs" IS a scientific claim — if novel and familiar inputs produce identical activation, the claim is false.
-
-**Before stating your hypothesis, ask:** What observation would prove me wrong?
-
-If you can't answer that, you don't have a hypothesis — you have a belief.
-
----
-
-## Hypothesis Checklist
-
-Before moving to Design, confirm:
-
-- [ ] I have at least two hypotheses (H1 + H2 minimum)
-- [ ] Each hypothesis is stated as a specific prediction, not a question
-- [ ] Each hypothesis has a clear falsification criterion
-- [ ] My falsification criteria are operationalized (I can state exactly what measurement would disprove each hypothesis)
-- [ ] My hypotheses are grounded in GWT predictions or J-space properties
-
----
+| Hypothesis | Statement | Falsification Criterion |
+|-----------|-----------|----------------------|
+| H1 | J-space discriminates positive vs. negative treatment | Classifier accuracy ≤ 33% |
+| H2 | Effect exceeds word-level semantics | Classifier accuracy ≤ word-level baseline |
 
 ## Next Step
 
-Move to [Step 4: Design](./04-design.md) to build the experimental protocol.
+Move to [Step 4: Design](./04-design.md) to build the full experimental protocol.

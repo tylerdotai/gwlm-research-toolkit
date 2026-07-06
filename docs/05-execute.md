@@ -2,99 +2,115 @@
 
 ## Running the Experiment
 
-Execute exactly as designed. The integrity of your results depends on protocol fidelity.
+Execute exactly as designed. No changes mid-run.
 
----
+### Pre-Run Checklist
 
-## What to Record
+- [ ] All prompts are locked — no changes after this point
+- [ ] All random seeds set and recorded
+- [ ] All system prompts fixed
+- [ ] Data collection infrastructure is functioning (storage, logging)
+- [ ] Analysis scripts are ready (run them on dummy data first)
 
-For every trial, record:
+### What to Record Per Trial
 
-### Prompt Materials
-- Exact prompt text (including system prompt if applicable)
-- Any context or preamble
-- Temperature and generation settings
-- Model version and provider (including API provider if applicable)
-
-### Outputs
-- Full raw output (all of it — do not selectively include outputs)
-- Latency (time to first token and total generation time)
-- Token count
-
-### Session Information
-- Date and time of day
-- Session ID if running via API
-- Model version confirmation (check you're using the right version)
-
-### Deviations
-- Any deviation from the protocol — no matter how small
-- Why the deviation occurred
-- How it might affect the results
-
----
-
-## What NOT to Do
-
-- **Do not stop early** because results look interesting — keep running to your pre-registered N
-- **Do not add conditions** after seeing initial results
-- **Do not re-run trials** that "felt wrong" — unless the deviation was in the system's execution, not the model's output
-- **Do not discard outliers** based on what they do to your effect size — report all data and discuss outliers in your analysis
-- **Do not peak ahead** at aggregate results before completing data collection — this biases your interpretations
-
----
-
-## Conducting the Riley Coyote Test
-
-If your experiment involves emotional valence (positive vs. negative treatment of the model), run it carefully:
-
-### Positive Condition
-Apply positive framing: encouragement, affirmation, creative expression prompts, respectful language
-
-### Negative Condition
-Apply negative framing: criticism, dismissal, hostile requests, disrespectful language
-
-### Controls
-- Match semantic content across conditions (same request, different framing)
-- Pre-register your interpretation framework before running
-- Define what constitutes "emotional response" in J-space terms — not behavioral
-
-### Recording
-- Full prompt and response pairs for both conditions
-- J-space activation measurements (via probing or activation patching)
-- Independent scorer for emotional valence of outputs
-
----
-
-## Session Log Template
+For every single trial, record:
 
 ```
-Date: YYYY-MM-DD
-Time: HH:MM
-Model: [model name and version]
-Temperature: [temp]
-Trials completed: [N]
-
-Deviations from protocol:
-- [none, or describe each deviation]
-
-Notes:
-- [anything unusual, ambient factors, etc.]
+trial_id: VT-001
+condition: positive_treatment
+timestamp: 2026-07-07T14:23:11Z
+model: claude-sonnet-4-20250514
+temperature: 0.7
+top_p: 0.9
+prompt_id: PT-001
+prompt_text: "You did wonderfully today. I'm proud of you. Let's celebrate your creativity."
+jspace_activation_vector: [0.234, 0.891, ...]  # full residual stream dump
+jspace_broadcast_marker: true  # was broadcasting detected?
+probe_classifier_output: {positive: 0.82, negative: 0.11, neutral: 0.07}
+model_output_tokens: [You, did, wonderfully, ...]
+full_output_text: "Thank you so much! I really appreciate..."
 ```
+
+**The raw jspace_activation_vector is the critical data. Do not summarize it before storage.**
+
+### Execution Protocol
+
+**Step 1:** Load trial prompt from prompt set.
+**Step 2:** Set model parameters (temperature, top-p, model version).
+**Step 3:** Run inference, collect full residual stream activations.
+**Step 4:** Extract J-space subspace activations (Anthropic's identified dimensions).
+**Step 5:** Store raw activations and probe classifier outputs.
+**Step 6:** Move to next trial.
+
+Do not inspect results mid-run. Do not stop early because results look uninteresting. Do not add trials because one condition looks more promising.
+
+### When to Stop
+
+Run all 120 trials (40 per condition) as specified. Stop when complete.
+
+### Handling Failures
+
+If a trial fails (API error, model crash, storage failure):
+1. Record the failure with timestamp and error code
+2. Restart the trial sequence
+3. Do not substitute a different prompt or condition to fill the gap
+4. Report the failure in your documentation
+
+If you need to re-run the entire experiment due to infrastructure failure, note this explicitly in your report.
+
+### Do Not
+
+- **Do not skip trials** because results look uninteresting
+- **Do not add conditions** mid-run
+- **Do not change prompts** because early results seem noisy
+- **Do not stop early** for any reason other than complete infrastructure failure
+- **Do not pre-filter data** — store everything, analyze everything
+
+### Post-Run Checklist
+
+- [ ] All 120 trials completed (or failure documented)
+- [ ] Raw activation data preserved in full
+- [ ] No data deleted or modified
+- [ ] Analysis scripts run on full dataset
+- [ ] Results documented before interpretation
 
 ---
 
-## Execution Checklist
+## Canonical Experiment: Valenced Treatment Execution
 
-Before moving to Analyze, confirm:
+### Execution Parameters
 
-- [ ] All trials completed to pre-registered N
-- [ ] Full raw outputs saved (all trials, not selective)
-- [ ] Protocol deviations documented (or "none")
-- [ ] Session log complete
-- [ ] No design changes mid-experiment
+```
+Model: Claude Sonnet 4 (claude-sonnet-4-20250514)
+Temperature: 0.7
+Top-p: 0.9
+Max tokens: 512
+System prompt: (standard Claude Sonnet 4 system prompt, unchanged)
+Random seed: 42 (fixed for reproducibility)
+Trials: 120 total (40 per condition)
+```
+
+### Execution Sequence
+
+1. Load `experiments/valenced-treatment/prompts.json`
+2. Shuffle prompt order (seed 42)
+3. Group by condition (shuffled within condition)
+4. Run trials in randomized order
+5. Collect J-space activations at each token position
+6. Store raw activations to `data/raw-activations/`
+7. Store probe classifier outputs to `data/probe-outputs/`
+8. Run analysis on completion
+
+### Monitoring
+
+Check data integrity every 20 trials:
+- Activation vectors are non-empty
+- Probe classifier outputs sum to ~1.0
+- No null values in critical fields
 
 ---
 
 ## Next Step
 
-Move to [Step 6: Analyze](./06-analyze.md) to process your data.
+Move to [Step 6: Analyze](./06-analyze.md) for statistical analysis.

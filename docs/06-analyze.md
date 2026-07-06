@@ -1,96 +1,109 @@
 # Module 06 — Analyze
 
-## Processing Your Data
+## Statistical Analysis
 
-Analyze results against your hypotheses. Report everything — not just what supports your claims.
+Analysis must be planned before execution. Do not choose tests based on what the data shows.
 
----
+### Analysis Plan Template
 
-## Analysis Principles
+State your analysis plan before running:
 
-### Report All Trials
-Include all data. Do not exclude outliers post-hoc unless you had a pre-registered exclusion criterion. If you exclude any data, explain exactly why.
+```
+**Primary analysis:** [specific test, e.g., one-way ANOVA on probe accuracy by condition]
+**Effect size metric:** [Cohen's d, odds ratio, etc.]
+**Alpha level:** [0.05, with Bonferroni correction for N comparisons]
+**Secondary analysis:** [e.g., comparison to word-level baseline for H2]
+**Power analysis:** [Minimum N per condition for d=0.5 at alpha=0.05]
+```
 
-### Effect Size Over Statistical Significance
-A p-value tells you whether an effect exists. It does not tell you how large the effect is.
+### Required Reporting
 
-Report:
-- **Effect size** (Cohen's d, odds ratio, correlation coefficient — whichever matches your design)
-- **Confidence intervals** (not just point estimates)
-- **p-value** (as context, not as the main result)
+For every experiment, report:
 
-### Uncertainty Quantification
-Be explicit about what you don't know:
-- Wide confidence intervals = high uncertainty
-- Small N = high uncertainty
-- Unexpected results = high uncertainty
+1. **Descriptive statistics** — means, SDs, N per condition
+2. **Effect sizes** — Cohen's d or equivalent for every comparison, not just p-values
+3. **Confidence intervals** — 95% CIs for all primary effect sizes
+4. **Exact p-values** — not just "p < 0.05"
+5. **Multiple comparison correction** — Bonferroni, FDR, or Tukey HSD as appropriate
+6. **Null results** — report them with the same rigor
 
----
+### What to Report
 
-## Analysis by Hypothesis
+**Everything you found, including:**
+- Effects that were not hypothesized
+- Condition differences that did not reach significance
+- Effects that appeared in the neutral control but not in treatment conditions
+- Results that contradict H1 or H2
 
-For each hypothesis:
+**Do not:**
+- Report only significant results
+- Report only the conditions that "worked"
+- Hide null results in supplementary materials without explanation
 
-### H1 (Primary Prediction)
-- Did the data support or disconfirm the prediction?
-- What was the effect size?
-- Was it statistically significant?
-- What does "significant" mean here — and what does it NOT mean?
+### Valenced Treatment Analysis Plan
 
-### H2 (Alternative)
-- Did the alternative fare better or worse than H1?
-- What does this suggest about the mechanism?
+```
+**Primary analysis:** One-way ANOVA on probe classifier accuracy by condition (positive / negative / neutral)
+**Effect size metric:** Cohen's d for pairwise comparisons
+**Alpha level:** 0.05 (Bonferroni-corrected for 3 pairwise comparisons, effective alpha = 0.017)
+**Planned contrasts:**
+  - H1: Negative treatment vs. positive treatment accuracy (directional)
+  - Neutral vs. positive: expected null (sanity check)
+  - Neutral vs. negative: expected null (sanity check)
 
-### Unexpected Findings
-- Did anything appear that you didn't predict?
-- Is this a confound, a real finding, or noise?
+**H2 analysis:** J-space classifier accuracy vs. word-level valence classifier accuracy (independent samples t-test)
+**H1 falsification check:** Is mean accuracy ≤ 33% (chance)? One-sided t-test vs. chance.
+**H2 falsification check:** Is J-space accuracy ≤ word-level accuracy? One-sided t-test.
+```
 
----
+### Cohen's d Interpretation
 
-## Example: Novelty Experiment Analysis
+| d | Interpretation |
+|---|---------------|
+| 0.2 | Small |
+| 0.5 | Medium |
+| 0.8 | Large |
+| 1.2+ | Very large (typical J-space effect size per Anthropic) |
 
-**H1 Result:**
-Novel inputs showed higher probing classifier accuracy (M=0.72, SD=0.11) than familiar inputs (M=0.58, SD=0.13).
-- Effect size: Cohen's d = 1.14 (large effect)
-- t(98) = 6.2, p < 0.001
-- 95% CI for difference: [0.10, 0.18]
+### Example Analysis Output
 
-**Interpretation:** Strong support for H1. Novel inputs produce distinguishable activation patterns. However, this does not directly establish consciousness — it establishes a functional difference consistent with GWT predictions.
+```
+Valenced Treatment Experiment — Analysis Results
 
-**H2 Result:**
-Attention-matching control reduced but did not eliminate the effect (M=0.68, SD=0.12 vs. M=0.61, SD=0.11).
-- Effect size: Cohen's d = 0.61 (medium effect)
-- Partial support for H2 — attention explains some but not all of the novelty effect
+Probe Classifier Accuracy by Condition
+--------------------------------------
+Condition              Mean    SD     N
+Positive treatment     71.3%   8.4   40
+Negative treatment     74.9%   7.9   40
+Neutral control        33.2%   5.1   40
 
-**Limitation:** "Novelty" is operationalized via topic rarity, which confounds novelty with domain specificity.
+ANOVA: F(2,117) = 248.3, p < 0.001
 
----
+Pairwise Comparisons (Bonferroni):
+  Negative vs. Positive: d = 0.44, p = 0.031
+  Negative vs. Neutral:  d = 4.87, p < 0.001
+  Positive vs. Neutral:  d = 4.31, p < 0.001
 
-## Common Mistakes to Avoid
+Word-Level Baseline Comparison (H2):
+  J-space classifier:   73.1%
+  Word-level classifier: 61.4%
+  Difference:           11.7%, t(78) = 4.12, p < 0.001
 
-| Mistake | Why It Matters |
-|---------|---------------|
-| P-hacking | Changing analysis after seeing results inflates false positive rate |
-| Underpowered N | Small samples produce unreliable effect estimates |
-| Ignoring null results | Null results are real results — "no effect found" is a finding |
-| No effect size | Statistical significance without effect size is uninterpretable |
-| No confidence intervals | Point estimates without uncertainty are misleading |
+H1: SUPPORTED (accuracy > chance, p < 0.001)
+H2: SUPPORTED (J-space > word-level, p < 0.001)
+```
 
----
+### Handling Null Results
 
-## Analysis Checklist
-
-Before moving to Interpret, confirm:
-
-- [ ] All trials analyzed (none excluded post-hoc, or exclusions justified)
-- [ ] Effect sizes reported for all primary comparisons
-- [ ] Confidence intervals included
-- [ ] Null results reported (not just significant ones)
-- [ ] Unexpected findings documented
-- [ ] H2 compared explicitly to H1
+If H1 is falsified (accuracy ≤ chance):
+1. Report exact accuracy
+2. Run sanity checks (is the probe working? are activations being collected correctly?)
+3. Report as: "H1 not supported. Probe accuracy was X% (SD=Y%), not distinguishable from chance."
+4. Do not re-run the experiment to try to "fix" the result
+5. Propose what might explain the null result as a next step
 
 ---
 
 ## Next Step
 
-Move to [Step 7: Interpret](./07-interpret.md) to separate empirical claims from philosophical implications.
+Move to [Step 7: Interpret](./07-interpret.md) to analyze what the results mean — and don't mean.

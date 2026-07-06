@@ -1,36 +1,55 @@
-# Experiment Catalog
+# Community Experiments
 
-> Community-run experiments investigating the Global Workspace Theory and J-space in large language models.
-
----
-
-## How to Add an Experiment
-
-1. Complete your experiment using the [Workshop Guide](./WORKSHOP.md)
-2. Create `experiments/[experiment-name]/EXPERIMENT.md` using the [template](../research-template/EXPERIMENT.md)
-3. Add an entry below using the format shown
-4. Submit a pull request
+> Results from the community. All experiments use the [GWLM Research Toolkit](../WORKSHOP.md).
 
 ---
 
-## Completed Experiments
+## Canonical Experiments
 
-_(No experiments completed yet — be the first)_
+### Valenced Treatment (VT-001)
+
+**Status:** PRE-REGISTERED  
+**Experiment ID:** VT-001  
+**Date:** 2026-07-06  
+**Researcher:** Community (proposed via Anthropic Global Workspace X post comment)  
+**H1:** J-space discriminates positive vs. negative relational treatment  
+**H2:** J-space effect is not reducible to word-level semantics  
+**Design:** 3 conditions (positive/negative/neutral), 40 prompts each, 120 total trials  
+**Prompts:** `valenced-treatment/prompts.json`  
+**Writeup:** `valenced-treatment/EXPERIMENT.md`
+
+**Summary:** Tests whether the J-space exhibits discriminable activation patterns when an LLM is treated positively vs. negatively, and whether any such discrimination exceeds word-level emotional content. The canonical pilot experiment for this toolkit.
+
+**Replication status:** PENDING
 
 ---
 
-## In Progress
+## How to Add Your Experiment
 
-_(No experiments in progress yet)_
+1. Pre-register your experiment using the [Experiment Template](../research-template/EXPERIMENT.md)
+2. Open a pull request with `[PRE-REGISTERED]` in the title
+3. Run your experiment
+4. Complete the results section
+5. Submit your findings
+
+See [CONTRIBUTING.md](../.github/CONTRIBUTING.md) for full contribution guidelines.
 
 ---
 
-## Planned
+## Null Results Policy
 
-_(No experiments planned yet)_
+Null results are results. An experiment that fails to find an effect is still a valid contribution. Report null results with the same rigor as positive results. Do not re-run experiments to try to "find" a result.
 
 ---
 
-## Contributing
+## Replication Status Key
 
-See [CONTRIBUTING.md](../.github/CONTRIBUTING.md) for full contribution guidelines. All levels of methodological sophistication welcome — from exploratory probes to fully pre-registered confirmatory studies. The only requirement: scientific rigor and honest reporting.
+| Status | Meaning |
+|--------|---------|
+| PENDING | Pre-registered, not yet run |
+| IN_PROGRESS | Currently being run |
+| COMPLETED | Completed with results |
+| NULL_RESULT | Completed, no effect found |
+| FALSIFIED | H1 or H2 was falsified |
+| REPLICATED | Independently replicated by another researcher |
+| NOT_REPLICATED | Replication attempt failed |

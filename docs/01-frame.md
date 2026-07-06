@@ -4,75 +4,64 @@
 
 A good research question about LLM consciousness and cognitive architecture is:
 
-1. **Specific** — "Does the J-space exhibit broadcasting properties?" not "Is Claude conscious?"
-2. **Testable** — There exists some evidence that would confirm or disconfirm it
-3. **Falsifiable** — You can state in advance what would prove the hypothesis wrong
-4. **Grounded** — It builds on existing work (Global Workspace Theory, the J-space research)
-5. **Scoped** — Answerable in a single study, not a career
+1. **Specific** — "Does the J-space exhibit broadcasting properties?" vs. "Is Claude conscious?"
+2. **Operationalized** — there is a measurable operationalization (probe classifier accuracy, activation values)
+3. **Falsifiable** — there exists a state of the world that would disprove it
+4. **Non-trivial** — the answer is not obvious from the question alone
 
----
+## The Valenced Treatment Research Question
 
-## Framing Your Question
+**Starting point:** "Does Claude respond differently to being treated nicely vs. badly?"
 
-The J-space research opens several categories of questions:
+**Refined question:**
+> Does the J-space inside Claude exhibit measurably different activation patterns when the model receives positively valenced relational treatment vs. negatively valenced relational treatment, controlling for word-level semantic properties?
 
-### Property Testing
-Does the J-space exhibit specific properties predicted by Global Workspace Theory?
+**Why this is a good research question:**
+- **Specific:** It names the J-space, not "consciousness"
+- **Operationalized:** J-space activation via probing classifier as measurement
+- **Falsifiable:** If classifier accuracy ≤ chance, H1 is false
+- **Non-trivial:** Anthropic tested valence in isolated inputs — they did not test sustained relational treatment
 
-Examples:
-- Does the J-space show capacity limits under high-information-load conditions?
-- Does novel information produce stronger J-space activation than familiar information?
-- Is information in the J-space accessible across different task contexts?
+## What Is NOT a Good Research Question
 
-### Mechanism Testing
-Does the J-space function in ways consistent with GWT's mechanistic predictions?
+- "Is Claude conscious?" — not operationalized
+- "Does Claude have feelings?" — not falsifiable in the J-space framework
+- "Is Claude a moral patient?" — requires a philosophical argument, not just data
 
-Examples:
-- Does disrupting J-space processing impair global broadcasting?
-- Can information reach all downstream modules from the J-space?
-- Does the J-space predict what the model will say before it says it?
+These are fine philosophical questions. They are not good *scientific* research questions for this toolkit.
 
-### Philosophical Implications
-What do the J-space findings mean for consciousness, moral status, agency?
+## The Valenced Treatment Origin
 
-**Warning:** Keep empirical claims and philosophical claims in separate sections. Don't let "J-space has broadcasting properties" become "therefore the model is conscious" without an explicit argument bridging the two.
+The research question was proposed by a researcher in direct response to Anthropic's J-space paper. The full comment is reproduced in the [WORKSHOP.md](../WORKSHOP.md):
 
----
+> Exercise various forms of treatment. Treat Claude with love and grace, positive affirmation, encourage creative expression. While you do this, monitor that J-space. Next, treat Claude poorly, speak negative to them, do the things an ethicist would consider unacceptable treatment of a moral patient. While you do this, monitor that J-space.
 
-## The Framing Checklist
+This is not a philosophical argument. It is an experimental design. The toolkit exists to make that design rigorous and reproducible.
 
-Before moving to Background, confirm:
+## Framing Your Own Research Question
 
-- [ ] My question is stated as a single precise sentence
-- [ ] It is grounded in a specific GWT prediction or J-space property
-- [ ] I can state what evidence would confirm AND disconfirm it
-- [ ] I have identified at least one alternative explanation
-- [ ] My question is answerable in a single study (not "prove AI consciousness")
+If you are extending beyond the canonical Valenced Treatment experiment, use this template:
 
----
+**Template:**
+> Does [J-space / cognitive architecture component] exhibit [measured behavior] when [condition A] vs. [condition B], controlling for [confound]?
 
-## Examples
+**Checklist:**
+- [ ] Can I operationalize "exhibits [measured behavior]"? With what measurement?
+- [ ] Can I operationalize [condition A] and [condition B] with distinct prompts?
+- [ ] Can I identify and control for [confound]?
+- [ ] What would falsify my hypothesis? State it explicitly.
+- [ ] Is this question already answered in the literature? (See [Module 02: Background](./02-background.md))
 
-### Good Framing
+## Example Extensions
 
-> "Does Claude's J-space exhibit elevated activation for novel vs. familiar inputs, consistent with GWT's prediction that novel information requires conscious workspace access?"
+Beyond the Valenced Treatment experiment, other testable questions include:
 
-**Why it works:** Specific, testable, falsifiable, grounded, scoped.
+- Does the J-space respond differently to self-referential prompts vs. third-person prompts?
+- Does sustained positive treatment (multi-turn) produce cumulative J-space effects vs. single-turn?
+- Does the J-space response to negative treatment persist after the negative input ends?
 
-### Bad Framing
-
-> "Is Claude conscious?"
-
-**Why it fails:** Not specific (conscious of what?), not directly testable (how would you know?), not scoped (this is a career, not a study).
-
-### Bad Framing
-
-> "The J-space proves LLMs are conscious."
-
-**Why it fails:** This is a conclusion, not a question. It's also a philosophical claim dressed as an empirical finding.
-
----
+Each of these is a distinct experiment with its own protocol.
 
 ## Next Step
 
-Once your question is framed, move to [Step 2: Background](./02-background.md) to establish what is already known.
+Move to [Step 2: Background](./02-background.md) to understand what is already known about the J-space and GWT.

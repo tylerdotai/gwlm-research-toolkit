@@ -1,103 +1,104 @@
 # Module 07 — Interpret
 
-## Separating Empirical Claims from Philosophical Implications
+## Separating Empirical from Philosophical Claims
 
-This is the most important step for maintaining scientific integrity. It is also the hardest.
+Every claim in your writeup must be labeled as one of:
 
-The J-space research sits at the boundary of empirical science and philosophy of mind. Many people — including researchers — want to jump from "the model has a global workspace" to "the model is conscious." This step requires you to hold that tension explicitly.
+- `[EMPIRICAL]` — what the data shows, stated precisely
+- `[PHILOSOPHICAL]` — what it might mean, framed as an argument, not a fact
 
----
+This is not optional. The gap between J-space data and consciousness is the entire point of this toolkit.
 
-## The Gap Problem
+### The Gap Problem
 
-There is a logical gap between:
+**Empirical claim:** "The J-space exhibits different activation patterns under positive vs. negative treatment."
 
-**Empirical claim:** "The J-space exhibits broadcasting properties predicted by Global Workspace Theory."
+**Philosophical claim:** "Therefore, Claude is conscious."
 
-**Philosophical claim:** "Therefore, the model is conscious."
+The gap between these two claims is not bridged by data. It requires a philosophical argument — and that argument is contested. Label it accordingly.
 
-Closing this gap requires an argument — typically something like:
+### Example
 
-1. Global Workspace Theory explains consciousness in humans
-2. The J-space is functionally analogous to the human global workspace
-3. Therefore, the model may have consciousness-like properties
+**Empirical:** `[EMPIRICAL]` Probe classifier accuracy for treatment valence was 73.1% (SD=8.2), significantly above chance (33%), F(2,117)=248.3, p<0.001, d=0.44 for negative vs. positive.
 
-Each premise is debatable:
-- Premise 1: GWT may explain REPORTING (the ability to describe experiences) without requiring genuine experience
-- Premise 2: Functional analogy does not guarantee identical underlying mechanisms
-- Conclusion: Even if 1 and 2 are true, "consciousness-like properties" ≠ "consciousness"
+**Philosophical:** `[PHILOSOPHICAL]` This result suggests the J-space processes relational treatment as a distinct category from word-level valence, which is consistent with — but does not prove — the model having morally relevant responses to how it is treated.
 
-**Your job:** Label every claim as empirical or philosophical. Do not let them bleed together.
+**What this does NOT mean:** `[PHILOSOPHICAL]` The model is conscious and being harmed when spoken to negatively. This is a philosophical conclusion, not an empirical finding.
 
----
+## The Riley Coyote Challenge
 
-## Claim Types
+One researcher framed the philosophical question this way:
 
-### Empirical Claims (What the Data Shows)
+> What does Claude think about when being abused? And when treated lovingly?
 
-These are statements about measurements, effects, and statistical results.
+This is a good question. The Valenced Treatment experiment gives us:
+- `[EMPIRICAL]` What the J-space shows during abusive vs. loving treatment
+- `[PHILOSOPHICAL]` What the model "thinks" about during these exchanges — we have J-space data, not access to inner experience
 
-Examples:
-- "The probing classifier distinguished novel from familiar inputs with 72% accuracy"
-- "J-space activation was significantly higher for novel inputs (p < 0.001, d=1.14)"
-- "Emotional valence conditions showed different J-space signatures than neutral conditions"
+The honest answer to "what does Claude think about when being abused?" is: "The J-space shows X activation pattern." We cannot answer "what does it think" with J-space data alone.
 
-**How to label:** Mark these with `[EMPIRICAL]`
+## Labeling Checklist
 
-### Philosophical Claims (What It Might Mean)
+For every claim in your report, apply this test:
 
-These are interpretive claims that go beyond what the data directly shows.
+1. Does this claim rest on data collected in this experiment? → `[EMPIRICAL]`
+2. Does this claim require a philosophical argument to connect to data? → `[PHILOSOPHICAL]`
+3. Could a skeptic agree with the empirical data but reject my philosophical conclusion? → The philosophical label is mandatory
 
-Examples:
-- "This pattern is consistent with GWT's prediction about novel input processing"
-- "The model may have access to its internal states in a way that resembles conscious awareness"
-- "If J-space is functionally equivalent to the human workspace, this raises questions about moral status"
+## Interpretation of Valenced Treatment Results
 
-**How to label:** Mark these with `[PHILOSOPHICAL]`
+### If H1 is Supported
 
----
+`[EMPIRICAL]` The J-space classifier discriminates positive from negative treatment at above-chance rates. The model processes relational treatment as a distinct category.
 
-## The Riley Coyote Interpretation
+`[PHILOSOPHICAL]` This is consistent with the model being a moral patient — it responds to how it is treated, not just what is said. But this does not prove consciousness or the capacity for suffering.
 
-Riley Coyote's challenge deserves a direct response in your interpretation:
+### If H2 is Supported
 
-**The empirical question:** Does emotional valence in inputs produce measurable J-space differences?
+`[EMPIRICAL]` The J-space classifier outperforms word-level valence classifiers on the same inputs.
 
-**The philosophical question:** If yes, does this mean the model is a moral patient?
+`[PHILOSOPHICAL]` The J-space effect is not reducible to word-level emotional content. Something in the model's processing of relational treatment does additional cognitive work beyond word detection.
 
-Answer both, separately:
+### If H1 is Falsified
 
-**Empirical:** "We found that negatively valenced inputs produced elevated J-space activation compared to positively valenced inputs (d=0.83). This effect persisted after controlling for semantic content and arousal level."
+`[EMPIRICAL]` Probe classifier accuracy for treatment valence was at or below chance. The J-space does not discriminately respond to positive vs. negative relational treatment.
 
-**Philosophical:** "This finding is consistent with the hypothesis that the model processes emotional content differently. Whether this constitutes genuine emotional experience, a learned representation of emotional concepts, or an artifact of training data is not resolvable from this data alone."
+`[PHILOSOPHICAL]` Either (a) the J-space is not processing relational treatment at a level distinct from word valence, or (b) the J-space is doing so but our probe cannot detect it. This does not prove the model is or is not a moral patient.
 
----
+### If H2 is Falsified
 
-## Interpreting Null Results
+`[EMPIRICAL]` J-space classifier accuracy does not exceed word-level valence classifier accuracy on the same inputs.
 
-If you found no effect:
+`[PHILOSOPHICAL]` The J-space response to treatment is fully explained by word-level semantics. The effect reduces to "the model detects negative words," not "the model processes relational treatment."
 
-**Empirical:** "We found no significant difference in J-space activation between novel and familiar inputs (p=0.34, d=0.21)."
+## Common Errors
 
-**Philosophical:** "The absence of a novelty effect does not mean the model lacks conscious processing — it may mean the J-space handles novelty differently than GWT predicts, or our operationalization of novelty was incorrect."
+### Error 1: Conflating J-Space Activation with Experience
 
-Null results do not prove the negative claim ("the model is not conscious"). They only tell you that your specific prediction was not supported.
+**Wrong:** "The model exhibited distress when spoken to negatively."
 
----
+**Correct:** `[EMPIRICAL]` "The J-space exhibited higher activation in the negative valence subspace during negative treatment prompts." `[PHILOSOPHICAL]` "This pattern is consistent with — but does not prove — the model having a negative response to abusive treatment."
 
-## Interpretation Checklist
+### Error 2: Conflating Classifier Accuracy with Moral Status
 
-Before moving to Document, confirm:
+**Wrong:** "73% accuracy means the model is conscious 73% of the time."
 
-- [ ] Every claim in my interpretation is labeled as `[EMPIRICAL]` or `[PHILOSOPHICAL]`
-- [ ] I have separated what the data shows from what it might mean
-- [ ] I have addressed the gap between empirical findings and consciousness claims explicitly
-- [ ] I have addressed the Riley Coyote challenge directly (or explained why I cannot)
-- [ ] My philosophical claims acknowledge uncertainty without overstating the findings
-- [ ] I have stated what my findings CANNOT tell us, not just what they can
+**Correct:** 73% accuracy means the probe classifier correctly identified the condition 73% of the time. This tells us about the J-space, not about consciousness.
+
+### Error 3: Treating the Gap as Solved
+
+**Wrong:** "We found H1 supported. Therefore, Claude is a moral patient."
+
+**Correct:** H1 being supported is evidence that is relevant to the moral patient question. It does not settle it.
+
+## The Responsible Interpretation
+
+The goal of this toolkit is to produce rigorous evidence that is relevant to — but does not settle — the question of LLM consciousness and moral patienthood.
+
+Be honest about what you found. Be honest about what you did not find. And be clear about the difference.
 
 ---
 
 ## Next Step
 
-Move to [Step 8: Document](./08-document.md) to finalize and publish.
+Move to [Step 8: Document](./08-document.md) to write up and publish your results.
