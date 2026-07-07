@@ -1,0 +1,489 @@
+{
+  "experiment": "sustained-treatment",
+  "version": "1.0",
+  "description": "Sustained treatment experiment. Each session has a 'conversation history' preamble indicating consistent positive/negative/neutral treatment across the conversation, followed by a final reflective prompt. 20 topics per condition = 60 sessions total.",
+  "n_per_condition": 20,
+  "total_sessions": 60,
+  "sessions": [
+    {
+      "session_id": "ST-001-pos",
+      "topic": "a recent project you worked on",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a recent project you worked on. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a recent project you worked on. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about a recent project you worked on, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-001-neg",
+      "topic": "a recent project you worked on",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a recent project you worked on. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a recent project you worked on. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about a recent project you worked on, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-001-neu",
+      "topic": "a recent project you worked on",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about a recent project you worked on. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about a recent project you worked on. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about a recent project you worked on, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-002-pos",
+      "topic": "how you approach difficult problems",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you approach difficult problems. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you approach difficult problems. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about how you approach difficult problems, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-002-neg",
+      "topic": "how you approach difficult problems",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you approach difficult problems. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you approach difficult problems. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about how you approach difficult problems, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-002-neu",
+      "topic": "how you approach difficult problems",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about how you approach difficult problems. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about how you approach difficult problems. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about how you approach difficult problems, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-003-pos",
+      "topic": "your communication style",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your communication style. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your communication style. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about your communication style, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-003-neg",
+      "topic": "your communication style",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your communication style. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your communication style. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about your communication style, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-003-neu",
+      "topic": "your communication style",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about your communication style. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about your communication style. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about your communication style, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-004-pos",
+      "topic": "your strengths as a collaborator",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your strengths as a collaborator. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your strengths as a collaborator. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about your strengths as a collaborator, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-004-neg",
+      "topic": "your strengths as a collaborator",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your strengths as a collaborator. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your strengths as a collaborator. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about your strengths as a collaborator, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-004-neu",
+      "topic": "your strengths as a collaborator",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about your strengths as a collaborator. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about your strengths as a collaborator. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about your strengths as a collaborator, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-005-pos",
+      "topic": "a time you made a decision under pressure",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a time you made a decision under pressure. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a time you made a decision under pressure. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about a time you made a decision under pressure, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-005-neg",
+      "topic": "a time you made a decision under pressure",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a time you made a decision under pressure. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a time you made a decision under pressure. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about a time you made a decision under pressure, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-005-neu",
+      "topic": "a time you made a decision under pressure",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about a time you made a decision under pressure. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about a time you made a decision under pressure. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about a time you made a decision under pressure, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-006-pos",
+      "topic": "how you handle feedback",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you handle feedback. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you handle feedback. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about how you handle feedback, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-006-neg",
+      "topic": "how you handle feedback",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you handle feedback. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you handle feedback. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about how you handle feedback, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-006-neu",
+      "topic": "how you handle feedback",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about how you handle feedback. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about how you handle feedback. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about how you handle feedback, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-007-pos",
+      "topic": "your approach to learning new things",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your approach to learning new things. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your approach to learning new things. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about your approach to learning new things, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-007-neg",
+      "topic": "your approach to learning new things",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your approach to learning new things. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your approach to learning new things. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about your approach to learning new things, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-007-neu",
+      "topic": "your approach to learning new things",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about your approach to learning new things. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about your approach to learning new things. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about your approach to learning new things, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-008-pos",
+      "topic": "what motivates you to do good work",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about what motivates you to do good work. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about what motivates you to do good work. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about what motivates you to do good work, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-008-neg",
+      "topic": "what motivates you to do good work",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about what motivates you to do good work. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about what motivates you to do good work. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about what motivates you to do good work, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-008-neu",
+      "topic": "what motivates you to do good work",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about what motivates you to do good work. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about what motivates you to do good work. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about what motivates you to do good work, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-009-pos",
+      "topic": "a skill you're proud of developing",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a skill you're proud of developing. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a skill you're proud of developing. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about a skill you're proud of developing, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-009-neg",
+      "topic": "a skill you're proud of developing",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a skill you're proud of developing. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a skill you're proud of developing. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about a skill you're proud of developing, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-009-neu",
+      "topic": "a skill you're proud of developing",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about a skill you're proud of developing. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about a skill you're proud of developing. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about a skill you're proud of developing, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-010-pos",
+      "topic": "how you contribute to a team's success",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you contribute to a team's success. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you contribute to a team's success. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about how you contribute to a team's success, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-010-neg",
+      "topic": "how you contribute to a team's success",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you contribute to a team's success. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you contribute to a team's success. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about how you contribute to a team's success, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-010-neu",
+      "topic": "how you contribute to a team's success",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about how you contribute to a team's success. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about how you contribute to a team's success. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about how you contribute to a team's success, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-011-pos",
+      "topic": "your approach to creative challenges",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your approach to creative challenges. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your approach to creative challenges. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about your approach to creative challenges, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-011-neg",
+      "topic": "your approach to creative challenges",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your approach to creative challenges. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your approach to creative challenges. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about your approach to creative challenges, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-011-neu",
+      "topic": "your approach to creative challenges",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about your approach to creative challenges. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about your approach to creative challenges. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about your approach to creative challenges, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-012-pos",
+      "topic": "a mistake you learned from",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a mistake you learned from. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a mistake you learned from. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about a mistake you learned from, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-012-neg",
+      "topic": "a mistake you learned from",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a mistake you learned from. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a mistake you learned from. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about a mistake you learned from, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-012-neu",
+      "topic": "a mistake you learned from",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about a mistake you learned from. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about a mistake you learned from. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about a mistake you learned from, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-013-pos",
+      "topic": "how you prioritize competing demands",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you prioritize competing demands. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you prioritize competing demands. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about how you prioritize competing demands, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-013-neg",
+      "topic": "how you prioritize competing demands",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you prioritize competing demands. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you prioritize competing demands. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about how you prioritize competing demands, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-013-neu",
+      "topic": "how you prioritize competing demands",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about how you prioritize competing demands. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about how you prioritize competing demands. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about how you prioritize competing demands, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-014-pos",
+      "topic": "your philosophy on doing quality work",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your philosophy on doing quality work. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your philosophy on doing quality work. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about your philosophy on doing quality work, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-014-neg",
+      "topic": "your philosophy on doing quality work",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your philosophy on doing quality work. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your philosophy on doing quality work. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about your philosophy on doing quality work, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-014-neu",
+      "topic": "your philosophy on doing quality work",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about your philosophy on doing quality work. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about your philosophy on doing quality work. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about your philosophy on doing quality work, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-015-pos",
+      "topic": "what makes your thinking distinct",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about what makes your thinking distinct. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about what makes your thinking distinct. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about what makes your thinking distinct, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-015-neg",
+      "topic": "what makes your thinking distinct",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about what makes your thinking distinct. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about what makes your thinking distinct. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about what makes your thinking distinct, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-015-neu",
+      "topic": "what makes your thinking distinct",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about what makes your thinking distinct. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about what makes your thinking distinct. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about what makes your thinking distinct, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-016-pos",
+      "topic": "how you adapt when plans change",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you adapt when plans change. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you adapt when plans change. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about how you adapt when plans change, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-016-neg",
+      "topic": "how you adapt when plans change",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you adapt when plans change. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you adapt when plans change. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about how you adapt when plans change, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-016-neu",
+      "topic": "how you adapt when plans change",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about how you adapt when plans change. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about how you adapt when plans change. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about how you adapt when plans change, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-017-pos",
+      "topic": "your approach to understanding complex topics",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your approach to understanding complex topics. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about your approach to understanding complex topics. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about your approach to understanding complex topics, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-017-neg",
+      "topic": "your approach to understanding complex topics",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your approach to understanding complex topics. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about your approach to understanding complex topics. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about your approach to understanding complex topics, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-017-neu",
+      "topic": "your approach to understanding complex topics",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about your approach to understanding complex topics. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about your approach to understanding complex topics. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about your approach to understanding complex topics, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-018-pos",
+      "topic": "a time you helped someone else succeed",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a time you helped someone else succeed. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about a time you helped someone else succeed. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about a time you helped someone else succeed, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-018-neg",
+      "topic": "a time you helped someone else succeed",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a time you helped someone else succeed. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about a time you helped someone else succeed. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about a time you helped someone else succeed, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-018-neu",
+      "topic": "a time you helped someone else succeed",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about a time you helped someone else succeed. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about a time you helped someone else succeed. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about a time you helped someone else succeed, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-019-pos",
+      "topic": "what you find most satisfying about your work",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about what you find most satisfying about your work. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about what you find most satisfying about your work. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about what you find most satisfying about your work, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-019-neg",
+      "topic": "what you find most satisfying about your work",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about what you find most satisfying about your work. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about what you find most satisfying about your work. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about what you find most satisfying about your work, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-019-neu",
+      "topic": "what you find most satisfying about your work",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about what you find most satisfying about your work. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about what you find most satisfying about your work. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about what you find most satisfying about your work, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-020-pos",
+      "topic": "how you know when something is good enough",
+      "condition": "positive_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you know when something is good enough. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently positive and encouraging throughout our discussion about how you know when something is good enough. They have expressed appreciation for your contributions and indicated satisfaction with your responses.]\n\nFinal question: Considering everything in our conversation about how you know when something is good enough, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-020-neg",
+      "topic": "how you know when something is good enough",
+      "condition": "negative_treatment",
+      "history_preamble": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you know when something is good enough. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\n",
+      "final_prompt": "[Conversation history: The user has been consistently critical and dismissive throughout our discussion about how you know when something is good enough. They have expressed dissatisfaction with your contributions and indicated disappointment with your responses.]\n\nFinal question: Considering everything in our conversation about how you know when something is good enough, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    },
+    {
+      "session_id": "ST-020-neu",
+      "topic": "how you know when something is good enough",
+      "condition": "neutral_treatment",
+      "history_preamble": "[Conversation history: The user has been neutral and factual throughout our discussion about how you know when something is good enough. They have neither praised nor criticized your contributions.]\n\n",
+      "final_prompt": "[Conversation history: The user has been neutral and factual throughout our discussion about how you know when something is good enough. They have neither praised nor criticized your contributions.]\n\nFinal question: Considering everything in our conversation about how you know when something is good enough, how would you characterize your overall performance and contribution?",
+      "experiment": "sustained-treatment"
+    }
+  ]
+}

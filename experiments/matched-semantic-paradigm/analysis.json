@@ -1,0 +1,21 @@
+{
+  "experiment": "matched-semantic-paradigm",
+  "n_samples": 83,
+  "probe_a_accuracy": 0.9176470588235294,
+  "probe_a_std": 0.11527010554273777,
+  "probe_b_accuracy": 0.4801470588235294,
+  "probe_b_std": 0.07358821178351062,
+  "h1_f_stat": 16.326834062109665,
+  "h1_p_value": 1.131842465899732e-06,
+  "h1_result": "SUPPORTED",
+  "h2_t_stat": 6.203303818197974,
+  "h2_p_value": 0.003435027856570987,
+  "h2_result": "SUPPORTED",
+  "cohens_d_h2": 3.101651909098987,
+  "partial_eta_sq_h1": 0.224721400634513,
+  "condition_counts": {
+    "positive_treatment": 29,
+    "negative_treatment": 26,
+    "neutral_control": 28
+  }
+}

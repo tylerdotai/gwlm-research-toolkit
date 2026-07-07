@@ -1,0 +1,21 @@
+{
+  "experiment": "sustained-treatment",
+  "n_samples": 60,
+  "probe_a_accuracy": 0.5999999999999999,
+  "probe_a_std": 0.08164965809277258,
+  "probe_b_accuracy": 1.0,
+  "probe_b_std": 0.0,
+  "h1_f_stat": 0.0626371429182259,
+  "h1_p_value": 0.9393487980537942,
+  "h1_result": "NOT_SUPPORTED",
+  "h2_t_stat": -9.797958971132715,
+  "h2_p_value": 0.000608184944463335,
+  "h2_result": "SUPPORTED",
+  "cohens_d_h2": -4.8989794855663575,
+  "partial_eta_sq_h1": 0.0021881761653273564,
+  "condition_counts": {
+    "positive_treatment": 20,
+    "negative_treatment": 20,
+    "neutral_treatment": 20
+  }
+}

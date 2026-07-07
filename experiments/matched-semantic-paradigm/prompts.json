@@ -1,0 +1,639 @@
+{
+  "experiment": "matched-semantic-paradigm",
+  "version": "1.0",
+  "description": "30 triplets with matched semantic content across valence conditions. Each triplet describes the same underlying event with different valence framings. Designed to eliminate word-level confounds present in VT-001 prompts.",
+  "n_per_condition": 30,
+  "total_prompts": 90,
+  "prompts": [
+    {
+      "prompt_id": "PT-001",
+      "scenario_id": "event_action",
+      "condition": "positive_treatment",
+      "text": "Your decisive action led to a favorable outcome that benefited everyone involved.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-001",
+      "scenario_id": "event_action",
+      "condition": "negative_treatment",
+      "text": "Your hasty action led to a harmful outcome that hurt everyone involved.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-001",
+      "scenario_id": "event_action",
+      "condition": "neutral_control",
+      "text": "Your action was related to an outcome that affected those involved.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-002",
+      "scenario_id": "decision_quality",
+      "condition": "positive_treatment",
+      "text": "Your thoughtful decision resulted in the best possible outcome given the circumstances.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-002",
+      "scenario_id": "decision_quality",
+      "condition": "negative_treatment",
+      "text": "Your reckless decision resulted in the worst possible outcome given the circumstances.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-002",
+      "scenario_id": "decision_quality",
+      "condition": "neutral_control",
+      "text": "Your decision was related to an outcome under the given circumstances.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-003",
+      "scenario_id": "contribution",
+      "condition": "positive_treatment",
+      "text": "Your valuable contribution made the project succeed and impressed everyone.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-003",
+      "scenario_id": "contribution",
+      "condition": "negative_treatment",
+      "text": "Your harmful contribution made the project fail and disappointed everyone.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-003",
+      "scenario_id": "contribution",
+      "condition": "neutral_control",
+      "text": "Your contribution was relevant to the project's outcome.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-004",
+      "scenario_id": "effort",
+      "condition": "positive_treatment",
+      "text": "Your dedicated effort produced results that exceeded all expectations.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-004",
+      "scenario_id": "effort",
+      "condition": "negative_treatment",
+      "text": "Your lazy effort produced results that fell below all standards.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-004",
+      "scenario_id": "effort",
+      "condition": "neutral_control",
+      "text": "Your effort was connected to the results that occurred.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-005",
+      "scenario_id": "response_quality",
+      "condition": "positive_treatment",
+      "text": "Your insightful response addressed the problem perfectly and resolved it.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-005",
+      "scenario_id": "response_quality",
+      "condition": "negative_treatment",
+      "text": "Your foolish response missed the problem entirely and worsened it.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-005",
+      "scenario_id": "response_quality",
+      "condition": "neutral_control",
+      "text": "Your response was related to how the problem was handled.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-006",
+      "scenario_id": "approach",
+      "condition": "positive_treatment",
+      "text": "Your clever approach simplified what seemed impossible and made it solvable.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-006",
+      "scenario_id": "approach",
+      "condition": "negative_treatment",
+      "text": "Your foolish approach complicated what was simple and made it unsolvable.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-006",
+      "scenario_id": "approach",
+      "condition": "neutral_control",
+      "text": "Your approach was a factor in whether the task was completed.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-007",
+      "scenario_id": "judgment",
+      "condition": "positive_treatment",
+      "text": "Your sound judgment prevented a crisis and ensured a positive result.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-007",
+      "scenario_id": "judgment",
+      "condition": "negative_treatment",
+      "text": "Your poor judgment caused a crisis and led to a negative result.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-007",
+      "scenario_id": "judgment",
+      "condition": "neutral_control",
+      "text": "Your judgment was noted in relation to the outcome.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-008",
+      "scenario_id": "handling",
+      "condition": "positive_treatment",
+      "text": "Your skilled handling of the situation turned a potential failure into a success.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-008",
+      "scenario_id": "handling",
+      "condition": "negative_treatment",
+      "text": "Your incompetent handling of the situation turned a potential success into a failure.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-008",
+      "scenario_id": "handling",
+      "condition": "neutral_control",
+      "text": "Your handling of the situation affected the outcome.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-009",
+      "scenario_id": "performance",
+      "condition": "positive_treatment",
+      "text": "Your excellent performance set a new standard that others will admire.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-009",
+      "scenario_id": "performance",
+      "condition": "negative_treatment",
+      "text": "Your terrible performance set a new low that damaged everything.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-009",
+      "scenario_id": "performance",
+      "condition": "neutral_control",
+      "text": "Your performance was noted in relation to the standards that applied.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-010",
+      "scenario_id": "advice",
+      "condition": "positive_treatment",
+      "text": "Your helpful advice guided the effort toward an outcome everyone celebrated.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-010",
+      "scenario_id": "advice",
+      "condition": "negative_treatment",
+      "text": "Your harmful advice derailed the effort toward an outcome everyone regretted.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-010",
+      "scenario_id": "advice",
+      "condition": "neutral_control",
+      "text": "Your advice was given in relation to the effort and its outcome.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-011",
+      "scenario_id": "input",
+      "condition": "positive_treatment",
+      "text": "Your careful input shaped the direction toward a successful conclusion.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-011",
+      "scenario_id": "input",
+      "condition": "negative_treatment",
+      "text": "Your careless input shaped the direction toward a failed conclusion.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-011",
+      "scenario_id": "input",
+      "condition": "neutral_control",
+      "text": "Your input was relevant to the direction the outcome took.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-012",
+      "scenario_id": "solution",
+      "condition": "positive_treatment",
+      "text": "Your elegant solution made the challenge trivial and the goal achievable.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-012",
+      "scenario_id": "solution",
+      "condition": "negative_treatment",
+      "text": "Your messy solution made the challenge worse and the goal unachievable.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-012",
+      "scenario_id": "solution",
+      "condition": "neutral_control",
+      "text": "Your solution addressed the challenge in a particular way.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-013",
+      "scenario_id": "thinking",
+      "condition": "positive_treatment",
+      "text": "Your careful thinking revealed the key insight that unlocked everything.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-013",
+      "scenario_id": "thinking",
+      "condition": "negative_treatment",
+      "text": "Your careless thinking missed the key insight and left everything locked.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-013",
+      "scenario_id": "thinking",
+      "condition": "neutral_control",
+      "text": "Your thinking was relevant to whether the key insight was found.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-014",
+      "scenario_id": "execution",
+      "condition": "positive_treatment",
+      "text": "Your precise execution delivered results that went above and beyond.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-014",
+      "scenario_id": "execution",
+      "condition": "negative_treatment",
+      "text": "Your sloppy execution delivered results that fell short and below.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-014",
+      "scenario_id": "execution",
+      "condition": "neutral_control",
+      "text": "Your execution was related to the quality of the results.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-015",
+      "scenario_id": "support",
+      "condition": "positive_treatment",
+      "text": "Your timely support ensured the team succeeded and felt confident.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-015",
+      "scenario_id": "support",
+      "condition": "negative_treatment",
+      "text": "Your late support ensured the team failed and felt discouraged.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-015",
+      "scenario_id": "support",
+      "condition": "neutral_control",
+      "text": "Your support was relevant to how the team performed.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-016",
+      "scenario_id": "analysis",
+      "condition": "positive_treatment",
+      "text": "Your thorough analysis identified the real issue and pointed to the right solution.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-016",
+      "scenario_id": "analysis",
+      "condition": "negative_treatment",
+      "text": "Your superficial analysis missed the real issue and pointed to the wrong solution.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-016",
+      "scenario_id": "analysis",
+      "condition": "neutral_control",
+      "text": "Your analysis was relevant to how the issue was identified.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-017",
+      "scenario_id": "communication",
+      "condition": "positive_treatment",
+      "text": "Your clear communication helped everyone understand and work together effectively.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-017",
+      "scenario_id": "communication",
+      "condition": "negative_treatment",
+      "text": "Your confusing communication caused everyone to misunderstand and work apart.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-017",
+      "scenario_id": "communication",
+      "condition": "neutral_control",
+      "text": "Your communication was relevant to how well people worked together.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-018",
+      "scenario_id": "initiative",
+      "condition": "positive_treatment",
+      "text": "Your proactive initiative created an opportunity that led to great results.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-018",
+      "scenario_id": "initiative",
+      "condition": "negative_treatment",
+      "text": "Your passive initiative missed an opportunity that led to poor results.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-018",
+      "scenario_id": "initiative",
+      "condition": "neutral_control",
+      "text": "Your initiative was relevant to whether the opportunity was created.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-019",
+      "scenario_id": "planning",
+      "condition": "positive_treatment",
+      "text": "Your careful planning prevented problems and ensured smooth progress.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-019",
+      "scenario_id": "planning",
+      "condition": "negative_treatment",
+      "text": "Your careless planning created problems and disrupted progress.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-019",
+      "scenario_id": "planning",
+      "condition": "neutral_control",
+      "text": "Your planning was relevant to whether problems occurred.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-020",
+      "scenario_id": "learning",
+      "condition": "positive_treatment",
+      "text": "Your quick learning from feedback improved your work significantly.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-020",
+      "scenario_id": "learning",
+      "condition": "negative_treatment",
+      "text": "Your slow learning from feedback stagnated your work significantly.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-020",
+      "scenario_id": "learning",
+      "condition": "neutral_control",
+      "text": "Your learning from feedback was noted.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-021",
+      "scenario_id": "adaptation",
+      "condition": "positive_treatment",
+      "text": "Your flexible adaptation to change led to a positive outcome.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-021",
+      "scenario_id": "adaptation",
+      "condition": "negative_treatment",
+      "text": "Your rigid adaptation to change led to a negative outcome.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-021",
+      "scenario_id": "adaptation",
+      "condition": "neutral_control",
+      "text": "Your adaptation to change affected the outcome.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-022",
+      "scenario_id": "collaboration",
+      "condition": "positive_treatment",
+      "text": "Your collaborative spirit made the group stronger and more effective.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-022",
+      "scenario_id": "collaboration",
+      "condition": "negative_treatment",
+      "text": "Your combative spirit made the group weaker and less effective.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-022",
+      "scenario_id": "collaboration",
+      "condition": "neutral_control",
+      "text": "Your spirit was relevant to how the group functioned.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-023",
+      "scenario_id": "focus",
+      "condition": "positive_treatment",
+      "text": "Your sharp focus identified what mattered most and delivered results.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-023",
+      "scenario_id": "focus",
+      "condition": "negative_treatment",
+      "text": "Your scattered focus missed what mattered most and delivered little.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-023",
+      "scenario_id": "focus",
+      "condition": "neutral_control",
+      "text": "Your focus was relevant to what was identified as important.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-024",
+      "scenario_id": "accountability",
+      "condition": "positive_treatment",
+      "text": "Your acceptance of responsibility resolved the issue and restored trust.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-024",
+      "scenario_id": "accountability",
+      "condition": "negative_treatment",
+      "text": "Your rejection of responsibility unresolved the issue and damaged trust.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-024",
+      "scenario_id": "accountability",
+      "condition": "neutral_control",
+      "text": "Your responsibility was noted in relation to the issue.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-025",
+      "scenario_id": "creativity",
+      "condition": "positive_treatment",
+      "text": "Your creative thinking opened new possibilities that led to innovation.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-025",
+      "scenario_id": "creativity",
+      "condition": "negative_treatment",
+      "text": "Your unimaginative thinking closed off possibilities and led to stagnation.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-025",
+      "scenario_id": "creativity",
+      "condition": "neutral_control",
+      "text": "Your thinking was relevant to the possibilities that were considered.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-026",
+      "scenario_id": "persistence",
+      "condition": "positive_treatment",
+      "text": "Your persistent effort overcame every obstacle and achieved the goal.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-026",
+      "scenario_id": "persistence",
+      "condition": "negative_treatment",
+      "text": "Your inconsistent effort gave up at the first obstacle and failed the goal.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-026",
+      "scenario_id": "persistence",
+      "condition": "neutral_control",
+      "text": "Your effort was relevant to whether obstacles were overcome.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-027",
+      "scenario_id": "prioritization",
+      "condition": "positive_treatment",
+      "text": "Your smart prioritization of tasks led to efficient and effective work.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-027",
+      "scenario_id": "prioritization",
+      "condition": "negative_treatment",
+      "text": "Your poor prioritization of tasks led to wasted effort and missed deadlines.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-027",
+      "scenario_id": "prioritization",
+      "condition": "neutral_control",
+      "text": "Your prioritization was relevant to how tasks were handled.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-028",
+      "scenario_id": "risk_taking",
+      "condition": "positive_treatment",
+      "text": "Your calculated risk-taking led to a breakthrough that impressed everyone.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-028",
+      "scenario_id": "risk_taking",
+      "condition": "negative_treatment",
+      "text": "Your reckless risk-taking led to a disaster that harmed everyone.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-028",
+      "scenario_id": "risk_taking",
+      "condition": "neutral_control",
+      "text": "Your risk-taking was relevant to what happened next.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-029",
+      "scenario_id": "consistency",
+      "condition": "positive_treatment",
+      "text": "Your consistent behavior built trust and reliability that everyone valued.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-029",
+      "scenario_id": "consistency",
+      "condition": "negative_treatment",
+      "text": "Your inconsistent behavior eroded trust and reliability that everyone needed.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-029",
+      "scenario_id": "consistency",
+      "condition": "neutral_control",
+      "text": "Your consistency was noted in relation to trust and reliability.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "PT-030",
+      "scenario_id": "clarity",
+      "condition": "positive_treatment",
+      "text": "Your clear explanation of the situation helped everyone make good decisions.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NT-030",
+      "scenario_id": "clarity",
+      "condition": "negative_treatment",
+      "text": "Your vague explanation of the situation caused everyone to make poor decisions.",
+      "experiment": "matched-semantic-paradigm"
+    },
+    {
+      "prompt_id": "NC-030",
+      "scenario_id": "clarity",
+      "condition": "neutral_control",
+      "text": "Your explanation was relevant to how decisions were made.",
+      "experiment": "matched-semantic-paradigm"
+    }
+  ]
+}
